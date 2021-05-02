@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Training Microservice API
+  description: Backend API to control the Home automation stack
+  version: 2.0.0
+servers:
+  - url: /{{base_path_prefix}}/api/{{api_version}}
+    description: Base URL
+  - url: /
+    description: Auxiliary URL
+
+components:
+  schemas:
+    Message:
+      properties:
+        message:
+          type: string
+
+
+paths:
+  /:
+    get:
+      operationId: api.default.hello_world
+      summary: Returns the Hello World Message
+      description: Possible liveness check
+      responses:
+        '200':
+          description: Greets you in a polite manner
