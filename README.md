@@ -1,0 +1,1 @@
+This is a demo application to show how to model a microservice helm chart
