@@ -11,9 +11,11 @@ servers:
 
 components:
   schemas:
-    Message:
+    Entry:
       properties:
-        message:
+        key:
+          type: string
+        value:
           type: string
 
 
@@ -34,6 +36,11 @@ paths:
       responses:
         '200':
           description: you got it
+          content:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Entry'
   /entry/search:
     get:
       operationId: api.default.search_entries
@@ -48,3 +55,8 @@ paths:
       responses:
         '200':
           description: you got it
+          content:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Entry'
