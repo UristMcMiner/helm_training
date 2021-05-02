@@ -26,3 +26,25 @@ paths:
       responses:
         '200':
           description: Greets you in a polite manner
+  /entry:
+    get:
+      operationId: api.default.get_entries
+      summary: Returns all entries
+      description: Get all cached entries
+      responses:
+        '200':
+          description: you got it
+  /entry/search:
+    get:
+      operationId: api.default.search_entries
+      summary: search for an entry
+      description: search for a cached entry
+      parameters:
+        - in: query
+          name: regex_str
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: you got it

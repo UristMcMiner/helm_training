@@ -1,1 +1,1 @@
-cache_file = "/cache/random"
+cache_file = "./random"

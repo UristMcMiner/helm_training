@@ -12,7 +12,8 @@ def search(regex_str):
     parsed_data = json.loads(cache_handle.read())
     pattern = re.compile(regex_str)
     return_list = list()
-    for key, value in parsed_data:
-        if pattern.match(key) or pattern.match(value):
-            return_list.append({"key": key, "value": value})
+    for key in parsed_data.keys():
+        data = parsed_data[key]
+        if pattern.match(key) or pattern.match(data):
+            return_list.append({"key": key, "value": data})
     return return_list

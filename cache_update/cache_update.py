@@ -2,7 +2,7 @@ import random
 import string
 import json
 
-cache_path = "/cache"
+cache_path = "./cache"
 
 cache_size = 5000
 

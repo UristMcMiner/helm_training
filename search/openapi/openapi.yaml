@@ -31,6 +31,12 @@ paths:
       operationId: api.default.search
       summary: Searches for an entry
       description: Get an entry, duh
+      parameters:
+        - in: query
+          name: regex_str
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: GET TO DA DATA
